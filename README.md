@@ -1,5 +1,4 @@
 <h1><a id="Dynamic_AC__0"></a>Dynamic AC (β)</h1>
-<h3><a id="Plugins_3"></a>Plugins</h3>
 <p>API доступно по адресу: <a href="http://dynamicac.pythonanywhere.com/send">http://dynamicac.pythonanywhere.com/send</a></p>
 <p>Запрос к API должен содержать в себе следующие данные:</p>
 <table class="table table-striped table-bordered">
@@ -7,28 +6,40 @@
 <tr>
 <th>Поле</th>
 <th>Описание</th>
+<th>Тип данных</th>
+<th>Вид передаваемых данных</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>APIKey</td>
 <td>Твой ключ API</td>
+<td>str</td>
+<td>API key</td>
 </tr>
 <tr>
 <td>enc</td>
 <td>Используется ли шифрование в запросе</td>
+<td>str</td>
+<td>yes/no</td>
 </tr>
 <tr>
 <td>keys</td>
 <td>Строка нажатых клавиш</td>
+<td>str</td>
+<td>ababab</td>
 </tr>
 <tr>
 <td>time</td>
 <td>Продолжительность игры</td>
+<td>str</td>
+<td>10m/1m/5h</td>
 </tr>
 <tr>
 <td>dur</td>
 <td>Продолжительность нажатия клавиши</td>
+<td>float</td>
+<td>0.1/0.5/1.5</td>
 </tr>
 </tbody>
 </table>

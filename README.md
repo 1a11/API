@@ -5,7 +5,7 @@
 |Поле|Описание|Тип данных|Вид передаваемых данных|
 |----|--------|----------|-----------------------|
 |APIKey|Твой ключ API|str|API key|
-|enc|Используется ли шифрование в запросе|str|yes/no|
+|enc|Используется ли шифрование в запросе|bool|True/False|
 |keys|Строка нажатых клавиш|str|ababab|
 |time|Продолжительность игры|str|10m/1m/5h|
 |dur|Продолжительность нажатия клавиши|float|0.1/0.5/1.5|
@@ -14,7 +14,27 @@
 
 ~~~~
 def snd():
-    values = {'APIKey':send,'enc':'yes','keys':'adswdawdsadaw','time':'10m','dur':'0.1-0.2-0.1-0.2'} # json values
+    values = {'APIKey':send,'enc':True,'keys':'adswdawdsadaw','time':'10m','dur':'0.1-0.2-0.1-0.2'} # json values
+    r = requests.post('http://dynamicac.pythonanywhere.com/send/', json=values)
+    return(r.text)
+~~~~
+
+#### Вы можете использовать массивы элементов в качестве значения списка
+
+|Поле|Описание|Тип данных|Вид передаваемых данных|
+|----|--------|----------|-----------------------|
+|APIKey|Твой ключ API|str|API key|
+|enc|Используется ли шифрование в запросе|bool|True/False|
+|keys|Строка нажатых клавиш|string array|['ababab','ababab']|
+|time|Продолжительность игры|string|10m/1m/5h|
+|dur|Продолжительность нажатия клавиши|float array|[[1.5,1.3,1.4],[1.5,1.3,1.4]]|
+
+
+###### Пример реализации JSON запроса со списками на Python:
+
+~~~~
+def snd():
+    values = {'APIKey':send,'enc':True,'keys':['ababab','ababab'],'time':'10m','dur':[[1.5,1.3,1.4],[1.5,1.3,1.4]]} # json values
     r = requests.post('http://dynamicac.pythonanywhere.com/send/', json=values)
     return(r.text)
 ~~~~

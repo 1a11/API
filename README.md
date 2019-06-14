@@ -25,6 +25,7 @@ def snd():
 |----|--------|----------|-----------------------|
 |APIKey|Твой ключ API|str|API key|
 |enc|Используется ли шифрование в запросе|bool|True/False|
+|gid|Game ID|string dict|'1A1A1A-2B2B2B-3C3C3C'|
 |keys|Строка нажатых клавиш|string array|['ababab','ababab']|
 |time|Продолжительность игры|string|10m/1m/5h|
 |dur|Продолжительность нажатия клавиши|float array|[[1.5,1.3,1.4],[1.5,1.3,1.4]]|
@@ -34,7 +35,7 @@ def snd():
 
 ~~~~
 def snd():
-    values = {'APIKey':send,'enc':True,'keys':['ababab','ababab'],'time':'10m','dur':[[1.5,1.3,1.4],[1.5,1.3,1.4]]} # json values
+    values = {'APIKey':send,'enc':True,'gid':'1A1A1A-2B2B2B-3C3C3C','keys':['ababab','ababab'],'time':'10m','dur':[[1.5,1.3,1.4],[1.5,1.3,1.4]]} # json values
     r = requests.post('http://dynamicac.pythonanywhere.com/send/', json=values)
     return(r.text)
 ~~~~

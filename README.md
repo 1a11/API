@@ -39,3 +39,38 @@ def snd():
     r = requests.post('http://dynamicac.pythonanywhere.com/send/', json=values)
     return(r.text)
 ~~~~
+# The following text is for RAM team members during the Discord Hackweek event.
+There are 2 types of queries that you can perform to the database API. Below are both structured.
+
+Below is an example of a post request and a table of its values. Such a request is needed in order to modify existing entries or create new settings.
+
+|Field|Description|Type of the data|How they should look like|
+|----|--------|----------|-----------------------|
+|akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
+|channel|Discord channel ID|str|'#abcdef'|
+|type|Request type|string|'post'|
+|sc|The type of string to be changed. Settings or coefficients|str|'s'|
+|emoji|Emoji filter status|str|'y'/'n'|
+|copypasta|Copypasta filter status|str|'y'/'n'|
+|troll|Troll filter status|str|'y'/'n'|
+|insult|Insult filter status|str|'y'/'n'|
+|alt|Alt filter status|str|'y'/'n'|
+
+Below is an example of a post request and a table of its values. Such a request is needed in order to modify existing entries or create new coef.
+
+|Field|Description|Type of the data|How they should look like|
+|----|--------|----------|-----------------------|
+|akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
+|channel|Discord channel ID|str|'#abcdef'|
+|type|Request type|string|'post'|
+|sc|The type of string to be changed. Settings or coefficients|str|'c'|
+|troll|Troll filter status|real|'y'/'n'|
+|insult|Insult filter status|real|'y'/'n'|
+
+Below is an example of a post request and a table of its values. Such a query is needed in order to get existing records of coefficients and settings from the database.
+
+|Field|Description|Type of the data|How they should look like|
+|----|--------|----------|-----------------------|
+|akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
+|channel|Discord channel ID|str|'#abcdef'|
+|type|Request type|string|'пуе'|

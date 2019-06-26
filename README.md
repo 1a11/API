@@ -56,6 +56,11 @@ Below is an example of a post request and a table of its values. Such a request 
 |insult|Insult filter status|str|'y'/'n'|
 |alt|Alt filter status|str|'y'/'n'|
 
+Sample request body: 
+~~~~
+{'type':'post','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING','sc':'s','emoji':'y','copypasta':'y','troll':'y','insult':'y','alt':'y'}
+~~~~
+
 Below is an example of a post request and a table of its values. Such a request is needed in order to modify existing entries or create new coef.
 
 |Field|Description|Type of the data|How they should look like|
@@ -67,6 +72,11 @@ Below is an example of a post request and a table of its values. Such a request 
 |troll|Troll filter status|real|'y'/'n'|
 |insult|Insult filter status|real|'y'/'n'|
 
+Sample request body: 
+~~~~
+{'type':'post','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING','sc':'c','troll':'','insult':''}
+~~~~
+
 Below is an example of a post request and a table of its values. Such a query is needed in order to get existing records of coefficients and settings from the database.
 
 |Field|Description|Type of the data|How they should look like|
@@ -74,3 +84,9 @@ Below is an example of a post request and a table of its values. Such a query is
 |akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
 |channel|Discord channel ID|str|'#abcdef'|
 |type|Request type|string|'пуе'|
+
+Sample request body:
+~~~~
+{'type':'get','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING'}
+~~~~
+

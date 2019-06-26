@@ -69,8 +69,8 @@ Below is an example of a post request and a table of its values. Such a request 
 |channel|Discord channel ID|str|'#abcdef'|
 |type|Request type|string|'post'|
 |sc|The type of string to be changed. Settings or coefficients|str|'c'|
-|troll|Troll filter status|real|'y'/'n'|
-|insult|Insult filter status|real|'y'/'n'|
+|troll|Troll filter status|real|0.3|
+|insult|Insult filter status|real|0.6|
 
 Sample request body: 
 ~~~~

@@ -48,7 +48,7 @@ Below is an example of a post request and a table of its values. Such a request 
 |----|--------|----------|-----------------------|
 |akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
 |channel|Discord channel ID|str|'#abcdef'|
-|type|Request type|string|'post'|
+|a_type|Request type|string|'post'|
 |sc|The type of string to be changed. Settings or coefficients|str|'s'|
 |emoji|Emoji filter status|str|'y'/'n'|
 |copypasta|Copypasta filter status|str|'y'/'n'|
@@ -58,7 +58,7 @@ Below is an example of a post request and a table of its values. Such a request 
 
 Sample request body: 
 ~~~~
-{'type':'post','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING','sc':'s','emoji':'y','copypasta':'y','troll':'y','insult':'y','alt':'y'}
+{'a_type':'post','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING','sc':'s','emoji':'y','copypasta':'y','troll':'y','insult':'y','alt':'y'}
 ~~~~
 
 Below is an example of a post request and a table of its values. Such a request is needed in order to modify existing entries or create new coef.
@@ -67,14 +67,14 @@ Below is an example of a post request and a table of its values. Such a request 
 |----|--------|----------|-----------------------|
 |akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
 |channel|Discord channel ID|str|'#abcdef'|
-|type|Request type|string|'post'|
+|a_type|Request type|string|'post'|
 |sc|The type of string to be changed. Settings or coefficients|str|'c'|
 |troll|Troll filter status|real|0.3|
 |insult|Insult filter status|real|0.6|
 
 Sample request body: 
 ~~~~
-{'type':'post','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING','sc':'c','troll':'','insult':''}
+{'a_type':'post','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING','sc':'c','troll':'','insult':''}
 ~~~~
 
 Below is an example of a post request and a table of its values. Such a query is needed in order to get existing records of coefficients and settings from the database.
@@ -83,10 +83,10 @@ Below is an example of a post request and a table of its values. Such a query is
 |----|--------|----------|-----------------------|
 |akey|Your API key|str|TEST:TESTKEYID12:SUPERSECRETSTRING|
 |channel|Discord channel ID|str|'#abcdef'|
-|type|Request type|string|'пуе'|
+|a_type|Request type|string|'пуе'|
 
 Sample request body:
 ~~~~
-{'type':'get','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING'}
+{'a_type':'get','channel':'#fdfd','akey':'TEST:TESTKEYID12:SUPERSECRETSTRING'}
 ~~~~
 
